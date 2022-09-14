@@ -22,64 +22,73 @@
             <td style="width: 103px">Ledger Head</td>
             <td>
                 <asp:DropDownList ID="ddlHead" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="ledHead" DataValueField="ledgerId" OnSelectedIndexChanged="ddlHead_SelectedIndexChanged">
+                    <asp:ListItem Value="-1">Select</asp:ListItem>
+                
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:hadaConnectionString %>" SelectCommand="SELECT [ledgerId], [ledHead] FROM [LedgerHead]"></asp:SqlDataSource>
             </td>
             <td>&nbsp;</td>
         </tr>
-        <asp:Panel runat="server" ID="pSales">
+        <asp:panel runat="server" ID="pSales" Visible="false">
             <tr>
             <td style="width: 103px; height: 20px">Customer Name</td>
             <td style="height: 20px">
-                <asp:TextBox ID="txtCustomer" runat="server" Width="324px"></asp:TextBox>
+                <asp:TextBox ID="txtCustname" runat="server" Width="270px"></asp:TextBox>
             </td>
             <td style="height: 20px"></td>
-            </tr>
+        </tr>
             <tr>
             <td style="width: 103px; height: 20px">Customer Company</td>
             <td style="height: 20px">
-                <asp:TextBox ID="txtCustcompany" runat="server" Width="321px"></asp:TextBox>
+                <asp:TextBox ID="txtCustcompany" runat="server" Width="266px"></asp:TextBox>
             </td>
             <td style="height: 20px"></td>
-            </tr>
-            <tr>
+        </tr>
+             <tr>
             <td style="width: 103px; height: 20px">Customer Mobile</td>
             <td style="height: 20px">
                 <asp:TextBox ID="txtCustmobile" runat="server"></asp:TextBox>
             </td>
             <td style="height: 20px"></td>
-            </tr>
+        </tr>
+             <tr>
+            <td style="width: 103px; height: 20px">Customer C/O</td>
+            <td style="height: 20px">
+                <asp:DropDownList ID="ddlCustcof" runat="server" DataSourceID="SqlDataSource3" DataTextField="custName" DataValueField="custid">
+                    <asp:ListItem Value="-1">Select</asp:ListItem>
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:hadaConnectionString %>" SelectCommand="SELECT [custid], [custName] FROM [Customers]"></asp:SqlDataSource>
+            </td>
+            <td style="height: 20px"></td>
+        </tr>
             <tr>
+            <td style="width: 103px; height: 20px">Is Compliment</td>
+            <td style="height: 20px">
+                <asp:RadioButtonList ID="rdCompli" runat="server" RepeatDirection="Horizontal" AutoPostBack="True">
+                    <asp:ListItem Selected="True" Value="0">No</asp:ListItem>
+                    <asp:ListItem Value="1">Yes</asp:ListItem>
+                </asp:RadioButtonList>
+            </td>
+            <td style="height: 20px"></td>
+        </tr>
+        <tr>
             <td style="width: 103px; height: 20px">Product</td>
             <td style="height: 20px">
-                
-                <asp:DropDownList ID="ddlProducts" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource3" DataTextField="prodName" DataValueField="prodid" OnSelectedIndexChanged="ddlProducts_SelectedIndexChanged">
+                <asp:DropDownList ID="ddlProduct" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="prodName" DataValueField="prodid" OnSelectedIndexChanged="ddlProduct_SelectedIndexChanged">
+                    <asp:ListItem Value="-1">Select</asp:ListItem>
                 </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:hadaConnectionString %>" SelectCommand="SELECT [prodid], [prodName] FROM [Products]"></asp:SqlDataSource>
-                
+                <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:hadaConnectionString %>" SelectCommand="SELECT [prodid], [prodName] FROM [Products]"></asp:SqlDataSource>
             </td>
             <td style="height: 20px"></td>
-            </tr>
-            <tr>
-            <td style="width: 103px; height: 20px">Is Complimentary</td>
+        </tr>
+             <tr>
+            <td style="width: 103px; height: 20px">Invoice Number</td>
             <td style="height: 20px">
-                
-                <asp:RadioButtonList ID="rdCompliment" runat="server" AutoPostBack="True" OnSelectedIndexChanged="rdCompliment_SelectedIndexChanged" RepeatDirection="Horizontal">
-                    <asp:ListItem Selected="True">No</asp:ListItem>
-                    <asp:ListItem>Yes</asp:ListItem>
-                </asp:RadioButtonList>
-                
+                <asp:TextBox ID="txtInvNo" runat="server"></asp:TextBox>
             </td>
             <td style="height: 20px"></td>
-            </tr>
-            <tr>
-                <td style="width: 103px; height: 20px">Invoice No(ZOHO)</td>
-                <td style="height: 20px">
-                    <asp:TextBox ID="txtInvNo" runat="server" Enabled="false"></asp:TextBox>
-                </td>
-                <td style="height: 20px"></td>
-            </tr>
-        </asp:Panel>
+        </tr>
+        </asp:panel>
         <tr>
             <td style="width: 103px; height: 20px">Amount</td>
             <td style="height: 20px">
@@ -95,9 +104,9 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 103px; height: 20px;"></td>
-            <td style="height: 20px"></td>
-            <td style="height: 20px"></td>
+            <td style="width: 103px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
             <td style="width: 103px">&nbsp;</td>
@@ -107,9 +116,9 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 103px; height: 20px;"></td>
-            <td style="height: 20px"></td>
-            <td style="height: 20px"></td>
+            <td style="width: 103px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
             <td style="width: 103px">&nbsp;</td>
@@ -118,7 +127,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Caption="Ledger Entries" DataKeyNames="transid" DataSourceID="SqlDataSource2">
+                <asp:GridView ID="grdLedger" runat="server" AutoGenerateColumns="False" Caption="Ledger Entries" DataKeyNames="transid" DataSourceID="SqlDataSource2" AllowCustomPaging="True" AllowPaging="True" AllowSorting="True" PageSize="50">
                     <Columns>
                         <asp:BoundField DataField="transid" HeaderText="transid" InsertVisible="False" ReadOnly="True" SortExpression="transid" />
                         <asp:BoundField DataField="transDate" HeaderText="transDate" SortExpression="transDate" />
@@ -128,7 +137,7 @@
                         <asp:BoundField DataField="transDescription" HeaderText="transDescription" SortExpression="transDescription" />
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:hadaConnectionString %>" SelectCommand="SELECT [transid], [transDate], [transLedid], [transAmount], [transType], [transDescription] FROM [LedgerEntries]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:hadaConnectionString %>" SelectCommand="SELECT [transid], [transDate], [transLedid], [transAmount], [transType], [transDescription] FROM [LedgerEntries] order by transDate desc"></asp:SqlDataSource>
             </td>
             <td>&nbsp;</td>
         </tr>

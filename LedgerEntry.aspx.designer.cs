@@ -60,13 +60,13 @@ namespace HadaWorld
         protected global::System.Web.UI.WebControls.Panel pSales;
 
         /// <summary>
-        /// txtCustomer control.
+        /// txtCustname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustomer;
+        protected global::System.Web.UI.WebControls.TextBox txtCustname;
 
         /// <summary>
         /// txtCustcompany control.
@@ -87,13 +87,13 @@ namespace HadaWorld
         protected global::System.Web.UI.WebControls.TextBox txtCustmobile;
 
         /// <summary>
-        /// ddlProducts control.
+        /// ddlCustcof control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProducts;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCustcof;
 
         /// <summary>
         /// SqlDataSource3 control.
@@ -105,13 +105,31 @@ namespace HadaWorld
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
 
         /// <summary>
-        /// rdCompliment control.
+        /// rdCompli control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rdCompliment;
+        protected global::System.Web.UI.WebControls.RadioButtonList rdCompli;
+
+        /// <summary>
+        /// ddlProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlProduct;
+
+        /// <summary>
+        /// SqlDataSource4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
 
         /// <summary>
         /// txtInvNo control.
@@ -150,13 +168,13 @@ namespace HadaWorld
         protected global::System.Web.UI.WebControls.Button btnSubmit;
 
         /// <summary>
-        /// GridView1 control.
+        /// grdLedger control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView grdLedger;
 
         /// <summary>
         /// SqlDataSource2 control.
