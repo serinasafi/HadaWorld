@@ -13,7 +13,7 @@ public class connection
        public SqlConnection cn = new SqlConnection();
         //public string constr = "Data Source=SQL5055.site4now.net;Initial Catalog=DB_A4B358_dashboard;User ID=DB_A4B358_dashboard_admin;Password=pw_db_9d9ae0;";
         //public string constr = "Data Source=AAALP02;Initial Catalog=afserve;User Id=sa;Password=sa123;";
-        public string constr = "Data Source=192.168.1.38;Initial Catalog=HADA;User Id=sa;Password=Aaa@2020mssql;";
+        public string constr = "Data Source=EDP-PC;Initial Catalog=HADA;User Id=sa;Password=sa123;";
         //public string constr = "Data Source=192.168.1.38;Initial Catalog=afserve;User Id=sa;Password=Aaa@2020mssql;";
         public connection()
         {

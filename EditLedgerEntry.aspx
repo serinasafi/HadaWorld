@@ -126,22 +126,21 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
+            <tr>
+            <td>From :<asp:TextBox ID="txtFrom" runat="server" TextMode="Date"></asp:TextBox> </td>
+            <td>To :<asp:TextBox ID="txtTo" runat="server" TextMode="Date"></asp:TextBox> &nbsp;&nbsp;&nbsp;<asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" /></td>
+            <td>
+                </td>
+        </tr>
+            
         <tr>
             <td colspan="2">
-                <asp:GridView ID="grdLedger" runat="server" AutoGenerateColumns="False" Caption="Ledger Entries" DataKeyNames="transid" DataSourceID="SqlDataSource2" AllowCustomPaging="True" AllowPaging="True" AllowSorting="True" PageSize="50" OnRowCommand="grdLedger_RowCommand">
+                <asp:GridView ID="grdLedger" runat="server" Caption="Ledger Entries" DataKeyNames="transid" AllowCustomPaging="True" AllowPaging="True" AllowSorting="True" PageSize="50" OnRowCommand="grdLedger_RowCommand">
                     <Columns>
-                        <asp:ButtonField CommandName="Edit" Text="Edit"/>
+                        <asp:ButtonField CommandName="Change" Text="Edit"/>
                         </Columns> 
-                    <Columns>
-                        <asp:BoundField DataField="transid" HeaderText="transid" InsertVisible="False" ReadOnly="True" SortExpression="transid" />
-                        <asp:BoundField DataField="transDate" HeaderText="transDate" SortExpression="transDate" />
-                        <asp:BoundField DataField="transLedid" HeaderText="transLedid" SortExpression="transLedid" />
-                        <asp:BoundField DataField="transAmount" HeaderText="transAmount" SortExpression="transAmount" />
-                        <asp:BoundField DataField="transType" HeaderText="transType" SortExpression="transType" />
-                        <asp:BoundField DataField="transDescription" HeaderText="transDescription" SortExpression="transDescription" />
-                    </Columns>
-                </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:hadaConnectionString %>" SelectCommand="SELECT [transid], [transDate], [transLedid], [transAmount], [transType], [transDescription] FROM [LedgerEntries] order by transDate desc"></asp:SqlDataSource>
+                    
+                </asp:GridView>                
             </td>
             <td>&nbsp;</td>
         </tr>
